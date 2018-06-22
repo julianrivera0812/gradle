@@ -24,7 +24,8 @@ pipeline {
 				doGenerateSubmoduleConfigurations: false, extensions: [], gitTool:
 				'Git_Centos', submoduleCfg: [], userRemoteConfigs: [[credentialsId:
 				'GitHub_julianrivera0812', url:
-				'https://github.com/julianrivera0812/gradle']]])
+				'https://github.com/julianrivera0812/gradle']]])				
+				sh 'gradle --b ./build.gradle compileJava'
 			}
 		 }
 		 stage('Unit Tests') {
